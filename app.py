@@ -20,6 +20,7 @@ def index():
 
             output_txt = os.path.join(OUTPUT_FOLDER, filename + ".txt")
 
+            # Whisper.cpp example call — replace or adjust if needed
             subprocess.run([
                 "./whisper/main", "-m", "models/ggml-base.en.bin",
                 "-f", filepath, "-of", output_txt.replace(".txt", "")
@@ -28,3 +29,8 @@ def index():
             return send_file(output_txt, as_attachment=True)
 
     return render_template("index.html")
+
+# ✅ THIS IS THE IMPORTANT PART FOR RENDER 👇
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(ho
