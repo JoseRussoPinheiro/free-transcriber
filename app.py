@@ -33,4 +33,5 @@ def index():
 # ✅ THIS IS THE IMPORTANT PART FOR RENDER 👇
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(ho
+    app.run(host="0.0.0.0", port=port)
+    
