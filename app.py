@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # ⬇️ PASTE YOUR REPLIT URL BETWEEN THE QUOTES (no trailing slash)
 # Example: "https://whisperserver-yourname.repl.co"
-https://e85ec01a-ea75-404c-a736-8372ffa3e0d7-00-20gzg5d16zu9e.worf.replit.dev = "https://YOUR-REPLIT-URL"
+REPLIT_URL = "https://e85ec01a-ea75-404c-a736-8372ffa3e0d7-00-20gzg5d16zu9e.worf.replit.dev"
 
 @app.route("/", methods=["GET", "POST"])
 def index():
